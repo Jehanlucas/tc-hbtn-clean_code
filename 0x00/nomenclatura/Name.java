@@ -1,11 +1,12 @@
 public class Name {
+
     public Date modifiedDate;
     public List<Testcase> findAllTestcasesByUser(Name.User user){};
 
 
     public List<Account> AccountList;
-
-
+    
+    
     public void deleteUser(Name.User user){};
 
 
@@ -19,6 +20,7 @@ public class Name {
     public saveUser(){}; saveAccount(){}; saveContract(){};
 
 
-    public int daysInYear = 360;
-    public int hoursInWeek = 168;
+
+    public final int DAYS_IN_YEAR = 360;
+    public final int HOURS_IN_WEEK = 168;
 }
