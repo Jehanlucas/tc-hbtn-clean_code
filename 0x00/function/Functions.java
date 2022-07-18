@@ -1,6 +1,8 @@
 public class Functions {
-    public void saveCash(Income income, Expense expense){
+    public void saveIncome(Income income){
         inRepo.save(income);
+    }
+    public void saveExpense(Expense expense){
         outRepo.save(expense);
     }
 
@@ -15,9 +17,13 @@ public class Functions {
     public User saveUser(User user){
         return userRepository.save(user);
     }
-    public void setRole(User user){
-        user.setRole(user);
+    public User saveUser(User user){
+      if(user.isAdmin){
+      user.setRole(user);
     }
+      return userRepository.save(user);
+    }
+
 
 
     public Environment getEnvironment(){
